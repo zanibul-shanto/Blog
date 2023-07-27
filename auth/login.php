@@ -1,6 +1,12 @@
 <?php require "../includes/header.php" ;
 require "../config/config.php";
 
+
+    if(isset($_SESSION['username'])){
+        header("location: http://localhost/Blog/index.php");
+    }
+
+
     if(isset($_POST['submit'])){
         if($_POST['email'] == '' OR $_POST['password'] == ''){
             echo "input can't be empty";

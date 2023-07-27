@@ -2,6 +2,10 @@
 require "../includes/header.php";
 require "../config/config.php";
 
+if(isset($_SESSION['username'])){
+  header("location: http://localhost/Blog/index.php");
+}
+
  
     if(isset($_POST['submit'])) {
 
