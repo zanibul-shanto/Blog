@@ -1,4 +1,39 @@
-<?php require "../includes/header.php"; ?>
+<?php 
+require "../includes/header.php";
+require "../config/config.php";
+
+ 
+    if(isset($_POST['submit'])) {
+
+        if(empty($_POST['email']) or empty($_POST['username']) or empty($_POST['password'])){
+          echo "Fill up the form carefully.";
+        }else{
+          $email = $_POST['email'];
+          $username = $_POST['username'];
+          $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+
+         $insert = $conn->prepare("INSERT INTO users (email, username, mypassword) VALUES
+          (:email, :username, :mypassword)");
+
+        
+
+          $insert-> execute([
+            ':email' => $email,
+            ':username' => $username,
+            ':mypassword' => $password
+          ]);
+
+          header("location: login.php");
+
+
+        }
+    }
+
+
+?>
+
+
 
             <form method="POST" action="register.php">
               <!-- Email input -->

@@ -6,7 +6,7 @@
         $host = "localhost";
 
         //dbname
-        $dbname= "blog";
+        $dbname= "Blog";
 
         //user
         $user = "root";
