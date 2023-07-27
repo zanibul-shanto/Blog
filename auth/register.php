@@ -1,4 +1,4 @@
-
+<?php require "../includes/header.php"; ?>
 
             <form method="POST" action="register.php">
               <!-- Email input -->
@@ -33,4 +33,4 @@
             </form>
 
 
-       
+       <?php require "../includes/footer.php"; ?>
