@@ -16,7 +16,12 @@ require "../config/config.php";
            if($login->rowCount() > 0){
 
                 if(password_verify($password, $row['mypassword'])){
-                    header('location: index.php');
+                   
+
+                    $_SESSION['username'] = $row['username'];
+                    header('location: http://localhost/Blog/index.php');
+
+    
                 }
 
            }
