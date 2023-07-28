@@ -30,15 +30,14 @@
             $update = $conn->prepare("UPDATE posts SET title = :title, subtitle = :subtitle, 
             body = :body WHERE id = '$id' ");
 
-            $insert->execute([
+            $update->execute([
                 ':title' => $title,
                 ':subtitle' => $subtitle,
-                ':body' => $body,
-                ':img' => $img,
-                ':user_id' => $user_id,
-                ':user_name' => $user_name,
+                ':body' => $body
 
             ]);
+
+            header('location: http://localhost/Blog/index.php');
 
           }
         }
