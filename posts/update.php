@@ -8,7 +8,9 @@
 
         $select = $conn->query("SELECT * FROM posts WHERE id = '$id'");
         $select ->execute();
-        $rows = $select->fetch(PDO::FETCH_OBJ);
+        $rows = $select->fetchAll(PDO::FETCH_OBJ);
+        //$rows = $posts->fetchAll(PDO::FETCH_OBJ);
+
     }
 ?>
 
