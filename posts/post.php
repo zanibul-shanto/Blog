@@ -53,6 +53,11 @@
                             <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>
                         </p>
                         -->
+
+                        <a href="http://localhost/Blog/posts/delete.php?del_id=<?php echo $post->id; ?>" class="btn btn-danger text-center float-end"> Delete </a>
+                        <a href="" class="btn btn-warning text-center"> Update </a>
+
+
                     </div>
                 </div>
             </div>
