@@ -36,6 +36,7 @@
             ]);
 
 
+            //Will update this part._Shanto
             if(move_uploaded_file($_FILES['img']['tmp_name'], $dir)){
                 //echo "done";
                 header('location: http://localhost/Blog/index.php');
