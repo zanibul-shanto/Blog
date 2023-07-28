@@ -27,8 +27,8 @@
                                 <h2 class="subheading"><?php echo $post->subtitle;  ?></h2>
                                 <span class="meta">
                                     Posted by
-                                    <a href="#!"><?php echo $post->user_name; ?></a>
-                                    <?php echo date('M', strtotime($row->created_at)) . ', ' . date('d', strtotime($row->created_at)) . ', ' . date('Y', strtotime($row->created_at)); ?>
+                                    <a href="#!"> <?php echo $post->user_name; ?> </a>
+                                    <?php echo date('M', strtotime($post->created_at)) . ', ' . date('d', strtotime($post->created_at)) . ', ' . date('Y', strtotime($post->created_at)); ?>
                                 </span>
                             </div>
                         </div>
