@@ -25,6 +25,8 @@ require "../config/config.php";
                    
 
                     $_SESSION['username'] = $row['username'];
+                    $_SESSION['user_id'] = $row['id'];
+
                     header('location: http://localhost/Blog/index.php');
 
     

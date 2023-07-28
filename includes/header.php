@@ -44,7 +44,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#">Profile</a></li>
-                                <li><a class="dropdown-item" href="../auth/logout.php">Log out</a></li>
+                                <li><a class="dropdown-item" href="../blog/auth/logout.php">Log out</a></li>
                                 <li><hr class="dropdown-divider"></li>
                            <!--     <li><a class="dropdown-item" href="#">Something else here</a></li> -->
                             </ul>
