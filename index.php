@@ -1,5 +1,7 @@
-<?php require "includes/header.php"; ?>
-<?php require "config/config.php"; ?>
+<?php require "../includes/header.php"; ?>
+<?php require "../config/config.php"; ?>
+
+
 
 <?php 
 
@@ -18,7 +20,7 @@
                 <?php //echo 'hello'. $_SESSION['username']; ?>
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="http://localhost/Blog/posts/post.php?post_id=<?php echo $row->id?>">
+                        <a href="http://localhost/Blog/posts/post.php?post_id=<?php echo $row->id; ?>">
                             <h2 class="post-title"> <?php echo $row->title;?> </h2>
                             <h3 class="post-subtitle"> <?php echo $row-> subtitle;?> </h3>
                         </a>
@@ -40,4 +42,4 @@
             </div>
 
 
-<?php require "includes/FOOTER.php"; ?>
+<?php require "../includes/FOOTER.php"; ?>
