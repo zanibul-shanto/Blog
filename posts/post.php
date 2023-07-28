@@ -55,7 +55,7 @@
                         -->
 
                         <a href="http://localhost/Blog/posts/delete.php?del_id=<?php echo $post->id; ?>" class="btn btn-danger text-center float-end"> Delete </a>
-                        <a href="" class="btn btn-warning text-center"> Update </a>
+                        <a href="update.php?update_id=<?php echo $post->id; ?>" class="btn btn-warning text-center"> Update </a>
 
 
                     </div>
