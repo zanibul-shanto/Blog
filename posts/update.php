@@ -21,11 +21,11 @@
               </div>
 
               <div class="form-outline mb-4">
-                <input type="text" name="subtitle" value="<?php echo $rows->title; ?>" id="form2Example1" class="form-control" placeholder="subtitle" />
+                <input type="text" name="subtitle" value="<?php echo $rows->subtitle; ?>" id="form2Example1" class="form-control" placeholder="subtitle" />
             </div>
 
               <div class="form-outline mb-4">
-                <input type="text" name="body"  id="form2Example1" class="form-control" placeholder="body" />
+                <input type="text" name="body" value="<?php echo $rows->body; ?>"  id="form2Example1" class="form-control" placeholder="body" />
             </div>
 
               
