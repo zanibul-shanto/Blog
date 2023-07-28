@@ -15,7 +15,7 @@
             <form method="POST" action="update.php?upd_id=">
               <!-- Email input -->
               <div class="form-outline mb-4">
-                <input type="text" name="title" value="<?php echo $rows->title; ?> "id="form2Example1" class="form-control" placeholder="title" />
+                <input type="text" name="title" value="<?php echo $rows->title; ?>" id="form2Example1" class="form-control" placeholder="title" />
                
               </div>
 
