@@ -27,6 +27,8 @@
             echo 'input can not be empty';
           }else{
 
+            unlink("images/" .$rows->img. "");
+
             $title = $_POST['title'];
             $subtitle = $_POST['subtitle'];
             $body = $_POST['body'];
@@ -73,6 +75,8 @@
               <div class="form-outline mb-4">
                 <textarea type="text" name="body" id="form2Example1" class="form-control" placeholder="body" rows="8"> <?php echo $rows->body; ?>"</textarea>
             </div>
+
+            <?php echo "<img src = 'images/". $rows->img."' width=500px height=300px>"; ?>
 
               
              <div class="form-outline mb-4">
