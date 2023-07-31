@@ -1,4 +1,9 @@
 <?php require "../config/config.php"; ?>
+<?php
+
+session_start(); //added manually
+
+?>
 
 <?php
 
@@ -10,10 +15,10 @@
         $posts = $select->fetch(PDO::FETCH_OBJ);
 
         if($_SESSION['user_id'] !== $posts->user_id){
-            //header("location: http://localhost/Blog/index.php");
+            header("location: http://localhost/Blog/index.php");
         }else{
 
-            unlink("images/". $posts->img. "");
+            unlink("images/". $posts->img . "");
 
             $delete = $conn->prepare("DELETE FROM posts WHERE id = :id");
             $delete->execute([
@@ -21,7 +26,7 @@
             ]);
         } 
 
-        //header("location: http://localhost/Blog/index.php");
+        header("location: http://localhost/Blog/index.php");
     }
 
 ?>

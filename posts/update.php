@@ -30,20 +30,27 @@
             $title = $_POST['title'];
             $subtitle = $_POST['subtitle'];
             $body = $_POST['body'];
+            $img = $_FILES['img']['name'];
+
+            $dir = 'images/' .basename($img);
 
 
 
             $update = $conn->prepare("UPDATE posts SET title = :title, subtitle = :subtitle, 
-            body = :body WHERE id = '$id' ");
+            body = :body, img = :img WHERE id = '$id' ");
 
             $update->execute([
                 ':title' => $title,
                 ':subtitle' => $subtitle,
-                ':body' => $body
+                ':body' => $body,
+                ':img' => $img
 
             ]);
 
-            header('location: http://localhost/Blog/index.php');
+            if(move_uploaded_file($_FILES['img']['tmp_name'], $dir)){
+              header('location: http://localhost/Blog/index.php');
+
+            }
 
           }
         }
