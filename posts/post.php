@@ -55,11 +55,14 @@
                         </p>
                         -->
 
-                        <a href="http://localhost/Blog/posts/delete.php?del_id=<?php echo $post->id; ?>" class="btn btn-danger text-center float-end"> Delete </a>
+                        <?php if(isset($_SESSION['user_id']) AND $_SESSION['user_id'] == $post->user_id ): ?>
+
+                            <a href="http://localhost/Blog/posts/delete.php?del_id=<?php echo $post->id; ?>" class="btn btn-danger text-center float-end"> Delete </a>
+                            
+                            <a href="update.php?upd_id=<?php echo $post->id; ?>" class="btn btn-warning text-center"> Update </a>
+
+                        <?php endif; ?>
                         
-                        <a href="update.php?upd_id=<?php echo $post->id; ?>" class="btn btn-warning text-center"> Update </a>
-
-
                     </div>
                 </div>
             </div>
