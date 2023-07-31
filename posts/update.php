@@ -13,6 +13,12 @@
         $rows = $select->fetch(PDO::FETCH_OBJ);
 
 
+        if($_SESSION['user_id'] !== $rows->user_id ){ 
+          header('location: http://localhost/Blog/index.php');
+
+        }
+
+
         //second query
 
         if(isset($_POST['submit'])){
