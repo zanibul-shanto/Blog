@@ -1,9 +1,6 @@
 <?php require "../config/config.php"; ?>
-<?php
+<?php require "../includes/navbar.php"; ?>
 
-session_start(); //added manually
-
-?>
 
 <?php
 
