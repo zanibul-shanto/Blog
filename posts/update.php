@@ -58,7 +58,8 @@
     
 ?>
 
-            <form method="POST" action="update.php?upd_id=<?php echo $id; ?>">
+
+            <form method="POST" action="update.php?upd_id=<?php echo $id; ?>" enctype="multipart/form-data">
               <!-- Email input -->
               <div class="form-outline mb-4">
                 <input type="text" name="title" value="<?php echo $rows->title; ?>" id="form2Example1" class="form-control" placeholder="title" />
