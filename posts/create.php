@@ -3,6 +3,14 @@
 
 <?php
 
+    $categories = $conn->query("SELECT * FROM categories");
+    $categories ->execute();
+    $category = $categories->fetchAll(PDO::FETCH_OBJ);
+
+
+
+
+
     if(isset($_POST['submit'])){
         if(empty($_POST['title']) OR empty($_POST['subtitle']) OR empty($_POST['body'])){
             echo 'input can not be empty';
@@ -65,6 +73,18 @@
     <div class="form-outline mb-4">
         <textarea type="text" name="body" id="form2Example1" class="form-control" placeholder="body"
             rows="8"></textarea>
+    </div>
+
+    <div class="form-outline mb-4">
+
+        <select name="category_id" class="form-select" aria-label="Default select example">
+            <option selected>Select Category</option>
+
+            <?php foreach($category as $cat): ?>
+
+            <option value=" <?php echo $cat->id; ?>"> <?php echo $cat->name; ?> </option>
+            <?php endforeach; ?>
+        </select>
     </div>
 
 
