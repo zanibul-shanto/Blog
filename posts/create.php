@@ -41,8 +41,6 @@
                     ':user_id' => $user_id,
                     ':user_name' => $user_name,
 
-
-
             ]);
 
 
