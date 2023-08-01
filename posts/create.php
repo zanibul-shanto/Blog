@@ -12,13 +12,14 @@
 
 
     if(isset($_POST['submit'])){
-        if(empty($_POST['title']) OR empty($_POST['subtitle']) OR empty($_POST['body'])){
+        if(empty($_POST['title']) OR empty($_POST['subtitle'])  OR empty($_POST['body']) OR empty($_POST['category_id']) ){
             echo 'input can not be empty';
         }else{
 
             $title = $_POST['title'];
             $subtitle = $_POST['subtitle'];
             $body = $_POST['body'];
+            $category_id = $_POST['category_id'];
             $img = $_FILES['img']['name'];
             $user_id = $_SESSION['user_id'];
             $user_name = $_SESSION['username'];
@@ -28,13 +29,14 @@
 
             $dir = 'images/' .basename($img);
 
-                $insert = $conn->prepare("INSERT INTO posts (title, subtitle, body, img, user_id, user_name)
-                VALUES (:title, :subtitle, :body, :img, :user_id, :user_name)");
+                $insert = $conn->prepare("INSERT INTO posts (title, subtitle, body, category_id, img, user_id, user_name)
+                VALUES (:title, :subtitle, :body, :category_id, :img, :user_id, :user_name)");
 
                 $insert->execute([
                     ':title' => $title,
                     ':subtitle' => $subtitle,
                     ':body' => $body,
+                    ':category_id' => $category_id,
                     ':img' => $img,
                     ':user_id' => $user_id,
                     ':user_name' => $user_name,
