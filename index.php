@@ -8,6 +8,10 @@
         $posts->execute();
         $rows = $posts->fetchAll(PDO::FETCH_OBJ);
 
+        $categories = $conn->query("SELECT * FROM categories");
+        $categories->execute();
+        $category = $categories->fetchAll(PDO::FETCH_OBJ);
+
 ?>
 
 
@@ -40,5 +44,17 @@
                 </div>
             </div>
 
+            <div class="row gx-4 gx-lg-5 justify-content-center">
 
+                <?php foreach ($category as $cat): ?>          
+
+                    <div class="col-md-6 ">
+                        <div class="alert alert-dark bg-dark text-center text-white" role="alert">
+                            <?php echo $cat->name; ?> 
+                        </div>         
+                    </div>
+                <?php endforeach; ?>
+
+            </div>
+        
 <?php require "./includes/FOOTER.php"; ?>
