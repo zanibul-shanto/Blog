@@ -49,11 +49,12 @@
                 <?php foreach ($category as $cat): ?>          
 
                     <div class="col-md-6 ">
-                        <div class="alert alert-dark bg-dark text-center text-white" role="alert">
+                        <a href="http://localhost/Blog/categories/category.php?cat_id=<?php echo $row->id; ?>">  
+                            <div class="alert alert-dark bg-dark text-center text-white" role="alert">
+                                <?php echo $cat->name; ?> 
 
-                            <a href="http://localhost/Blog/categories/category.php?cat_id=<?php echo $row->id; ?>"> <?php echo $cat->name; ?> </a>
-
-                        </div>         
+                            </div>   
+                        </a>      
                     </div>
                 <?php endforeach; ?>
 
